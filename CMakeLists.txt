@@ -31,7 +31,7 @@ FetchContent_MakeAvailable(stb)
 
 add_executable(
     ray_tracer
-    P4_raytracer.cpp
+    raytracer_tests.cpp
     test_main.cpp
     src/parsers.cpp
 )
