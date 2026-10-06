@@ -1,26 +1,4 @@
-// project: raytracer
-//
-// The grand finale: build a small ray tracer that renders 3D spheres and
-// triangles into a PNG image, with Phong lighting, shadows and mirror
-// reflections. It pulls together everything from the course: classes,
-// overloaded operators, inheritance with virtual methods, std::optional,
-// std::unique_ptr and std::vector.
-//
-// Work through each PART in order; later parts use earlier ones. When every
-// part is done, PART 10 renders exercises/05_capstone/scenes/test.txt and writes
-// "out.png" into the current directory. Open it and admire your work!
-// (To render the other bundled scenes, see this folder's README.md.)
-//
-//   RUN THIS EXERCISE FROM THE cpplings REPO ROOT (that is where the normal
-//   ./cpplings runner starts), otherwise the render test cannot find scene.txt.
-//
-// Do not modify the TEST_CASEs.
-// Do not modify the blocks marked "GIVEN ... (do not modify)"; they are the
-// PNG encoder and the scene-file parser, which are not the point of this
-// exercise.
-
 #define STB_IMAGE_WRITE_IMPLEMENTATION
-
 
 #include <raytracer/camera.hpp>
 #include <raytracer/hit.hpp>
