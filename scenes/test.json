@@ -1,0 +1,83 @@
+{
+    "image" : {
+        "width" : 400,
+        "height" : 300
+    },
+
+    "camera" : {
+        "eye" : [0.0, 0.0, 3.0],
+        "look_at" : [0.0, 0.0, 0.0],
+        "up" : [0.0, 1.0, 0.0],
+        "fov" : 60.0
+    },
+
+    "background" : [0.5, 0.7, 1.0],
+    "ambient" : [0.1, 0.1, 0.1],
+
+    "lights" : [
+        {
+            "position" : [5.0, 5.0, 5.0],
+            "color" : [1.0, 1.0, 1.0]
+        }
+    ],
+
+    "materials" : {
+        "red" : {
+            "diffuse" : [0.8, 0.2, 0.2],
+            "specular" : [1.0, 1.0, 1.0],
+            "shininess" : 64.0,
+            "reflectivity" : 0.0
+        },
+
+        "blue" : {
+            "diffuse" : [0.2, 0.3, 0.9],
+            "specular" : [1.0, 1.0, 1.0],
+            "shininess" : 64.0,
+            "reflectivity" : 0.2
+        },
+
+        "floor" : {
+            "diffuse" : [0.6, 0.6, 0.6],
+            "specular" : [0.2, 0.2, 0.2],
+            "shininess" : 16,
+            "reflectivity" : 0.3
+        }
+    },
+
+    "objects" : [
+        {
+            "type" : "sphere",
+            "center" : [0.0, 0.0, 0.0],
+            "radius" : 1.0,
+            "material" : "red"
+        },
+
+        {
+            "type" : "sphere",
+            "center" : [-1.6, -0.3, -1.0],
+            "radius" : 0.5,
+            "material" : "blue"
+        },
+
+        {
+            "type" : "triangle",
+            "vertices" : [
+                [-6.0, -1.0, -6.0],
+                [6.0, -1.0, -6.0],
+                [6.0, -1.0, 3.0]
+            ],
+            "material" : "floor"
+        },
+
+        {
+            "type" : "triangle",
+            "vertices" : [
+                [-6.0, -1.0, -6.0],
+                [6.0, -1.0, 3.0],
+                [-6.0, -1.0, 3.0]
+            ],
+            "material" : "floor"
+        }
+    ]
+
+}

@@ -1,0 +1,5 @@
+.cache/
+build/
+*.png
+compile_commands.json
+todo.txt
