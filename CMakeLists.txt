@@ -94,9 +94,6 @@ target_compile_options(
 )
 endif()
 
-
-
-
 target_link_options(
     ray_tracer
     PRIVATE

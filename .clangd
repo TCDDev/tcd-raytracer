@@ -1,0 +1,4 @@
+CompileFlags:
+  Add:
+    - -std=gnu++23
+    - -I/home/TCD/dev/ray_tracer/include

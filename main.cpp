@@ -18,16 +18,22 @@
 //   ./raytrace ../exercises/05_capstone/scenes/cornell.txt cornell.png
 //   ./raytrace ../exercises/05_capstone/scenes/spheres.txt spheres.png
 
-#define DOCTEST_CONFIG_DISABLE
 
+#include <raytracer/camera.hpp>
+#include <raytracer/image.hpp>
+#include <raytracer/parsers.hpp>
+#include <raytracer/renderer.hpp>
+#include <raytracer/scene.hpp>
 
 #include <exception>
 #include <iostream>
 #include <string>
 
+using namespace raytracer;
+
 int main(int argc, char **argv) {
   if (argc != 3) {
-    std::cerr << "usage: " << argv[0] << " <scene.txt> <output.png>\n";
+    std::cerr << "usage: " << argv[0] << " <scene.json> <output.png>\n";
     return 1;
   }
 
