@@ -11,23 +11,22 @@
 // filled in all the TODOs.
 //
 // Build (from this directory):
-//   g++ -std=c++23 -O2 -DDOCTEST_CONFIG_DISABLE -I../external/doctest \
+//   g++ -std=c++23 -O2 -DDOCTEST_CONFIG_DISABLE -I../external/doctest 
 //       main.cpp -o raytrace
 //
 // Run (scene file first, output PNG second):
 //   ./raytrace ../exercises/05_capstone/scenes/cornell.txt cornell.png
 //   ./raytrace ../exercises/05_capstone/scenes/spheres.txt spheres.png
 
+#include <exception>
+#include <iostream>
+#include <string>
 
 #include <raytracer/camera.hpp>
 #include <raytracer/image.hpp>
 #include <raytracer/parsers.hpp>
 #include <raytracer/renderer.hpp>
 #include <raytracer/scene.hpp>
-
-#include <exception>
-#include <iostream>
-#include <string>
 
 using namespace raytracer;
 

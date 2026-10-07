@@ -31,71 +31,83 @@ FetchContent_MakeAvailable(stb)
 
 add_executable(
     ray_tracer
-    raytracer_tests.cpp
-    test_main.cpp
+    src/main.cpp
     src/parsers.cpp
+    src/stb_image_write.cpp
 )
 
-target_include_directories(
-    ray_tracer
-    PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}/include
+add_executable(
+    ray_tracer_tests
+    tests/raytracer_tests.cpp
+    tests/test_main.cpp
+    src/parsers.cpp
+    src/stb_image_write.cpp
 )
 
-target_include_directories(
-    ray_tracer
-    SYSTEM PRIVATE
-        ${stb_SOURCE_DIR}   
-)
+function(configure_raytracer_target target_name)
+    target_include_directories(
+        ${target_name}
+        PRIVATE
+            ${CMAKE_CURRENT_SOURCE_DIR}/include
+    )
+
+    target_include_directories(
+        ${target_name}
+        SYSTEM PRIVATE
+            ${stb_SOURCE_DIR}
+    )
+
+    target_compile_features(
+        ${target_name}
+        PRIVATE
+            cxx_std_23
+    )
+
+    target_compile_options(
+        ${target_name}
+        PRIVATE
+            -Wall
+            -Wextra
+            -Wpedantic
+    )
+
+    if (CMAKE_BUILD_TYPE STREQUAL "Debug")
+        target_compile_options(
+            ${target_name}
+            PRIVATE
+                -g3
+                -fsanitize=address,undefined
+                -fno-omit-frame-pointer
+        )
+
+        target_link_options(
+            ${target_name}
+            PRIVATE
+                -fsanitize=address,undefined
+        )
+    endif()
+
+    if (CMAKE_BUILD_TYPE STREQUAL "RelWithDebInfo")
+        target_compile_options(
+            ${target_name}
+            PRIVATE
+                -fno-omit-frame-pointer
+        )
+    endif()
+endfunction()
+
+configure_raytracer_target(ray_tracer)
+configure_raytracer_target(ray_tracer_tests)
 
 target_link_libraries(
     ray_tracer
     PRIVATE
+        nlohmann_json::nlohmann_json
+)
+
+target_link_libraries(
+    ray_tracer_tests
+    PRIVATE
         doctest::doctest
         nlohmann_json::nlohmann_json
-
-)
-
-target_compile_features(
-    ray_tracer
-    PRIVATE
-        cxx_std_23
-)
-
-target_compile_options(
-    ray_tracer
-    PRIVATE
-        -Wall
-        -Wextra
-        -Wpedantic   
-)
-
-if (CMAKE_BUILD_TYPE STREQUAL "Debug")
-    target_compile_options(
-        ray_tracer
-        PRIVATE
-            -g3
-            -fsanitize=address,undefined
-            -fno-omit-frame-pointer
-    )
-
-    target_link_options(
-        ray_tracer
-        PRIVATE
-            -fsanitize=address,undefined
-    )
-endif()
-
-if (CMAKE_BUILD_TYPE STREQUAL "RelWithDebInfo")
-target_compile_options(
-    ray_tracer
-    PRIVATE
-        -fno-omit-frame-pointer
-)
-endif()
-
-target_link_options(
-    ray_tracer
-    PRIVATE
-        -fsanitize=address,undefined   
 )

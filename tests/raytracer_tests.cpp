@@ -1,5 +1,3 @@
-#define STB_IMAGE_WRITE_IMPLEMENTATION
-
 #include <raytracer/camera.hpp>
 #include <raytracer/hit.hpp>
 #include <raytracer/image.hpp>
