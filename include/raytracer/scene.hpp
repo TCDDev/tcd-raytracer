@@ -1,8 +1,13 @@
 #pragma once
 
+#include <algorithm>
+#include <cstddef>
+#include <memory>
 #include <variant>
 #include <vector>
 
+#include <raytracer/aabb.hpp>
+#include <raytracer/bvh.hpp>
 #include <raytracer/triangle.hpp>
 #include <raytracer/sphere.hpp>
 #include <raytracer/light.hpp>
@@ -12,13 +17,16 @@ namespace raytracer {
     class Scene {
 
         private:
-            using Object = std::variant<raytracer::Sphere, raytracer::Triangle>;
+            using Object = std::variant<Sphere, Triangle>;
+            using Objects = std::vector<Object>;
             
             Vec3 background_{0, 0, 0};
             Vec3 ambient_{0.1, 0.1, 0.1};
             
             std::vector<Object> objects_;
             std::vector<Light> lights_;
+
+            std::unique_ptr<BVHNode> root_;
         
         public:
 
@@ -53,13 +61,6 @@ namespace raytracer {
             void set_background (const Vec3& background) {
                 background_ = background;
             }
-
-
-
-            // TODO: Return the CLOSEST hit among all objects, or std::nullopt if the ray
-            // misses everything. Loop over objects; each time one reports a hit, keep it
-            // as the best so far AND shrink t_max to that hit's t, so subsequent objects
-            // only count if they are nearer.
             
             std::optional<Hit> closest_hit(const Ray &ray, double t_min, double t_max) const {
                 std::optional<Hit> best = std::nullopt;

@@ -2,6 +2,7 @@
 
 #include <optional>
 
+#include <raytracer/aabb.hpp>
 #include <raytracer/vec3.hpp>
 #include <raytracer/material.hpp>
 #include <raytracer/hit.hpp>
@@ -9,8 +10,7 @@
 
 namespace raytracer {
 
-    class Sphere {
-    public:
+    struct Sphere {
         
         const Vec3 center;
         double radius;
@@ -66,6 +66,15 @@ namespace raytracer {
 
             return Hit{t, point, normal, &material};
 
+        }
+
+        AABB bounding_box() const {
+            const Vec3 offset{radius, radius, radius};
+
+            return {
+                center - offset,
+                center + offset
+            };
         }
     };
 

@@ -1,16 +1,20 @@
 #pragma once
 
+
+#include <algorithm>
+#include <array>
 #include <optional>
 
+#include <raytracer/aabb.hpp>
 #include <raytracer/vec3.hpp>
 #include <raytracer/material.hpp>
 #include <raytracer/hit.hpp>
 #include <raytracer/ray.hpp>
 
+
 namespace raytracer {
 
-    class Triangle {
-    public:
+    struct Triangle {
         
         Vec3 v0, v1, v2;
         const Material material;
@@ -21,22 +25,9 @@ namespace raytracer {
                 v2(v2),
                 material(material) {}
 
-        // TODO: Ray-triangle intersection using the Moeller-Trumbore algorithm.
-        // Steps (return std::nullopt as soon as any test fails):
-        //   edge1 = v1 - v0;  edge2 = v2 - v0;
-        //   h = cross(ray.direction, edge2);   a = dot(edge1, h);
-        //   if |a| < 1e-9: ray is parallel to the triangle -> miss.
-        //   f = 1/a;   s = ray.origin - v0;   u = f * dot(s, h);
-        //   if u < 0 or u > 1: miss.
-        //   q = cross(s, edge1);   v = f * dot(ray.direction, q);
-        //   if v < 0 or u + v > 1: miss.
-        //   t = f * dot(edge2, q);
-        //   if t not in (t_min, t_max): miss.
-        //   normal = cross(edge1, edge2).normalized();
-        //   if dot(normal, ray.direction) > 0: normal = -normal;  // face the ray
-        //   Fill and return a Hit (t, ray.at(t), normal, material).
-
-
+        
+                
+        //Ray-triangle intersection using the Moeller-Trumbore algorithm.
         std::optional<Hit> intersect(const Ray &ray, double t_min, double t_max) const   {
             
             const Vec3 edge1 = v1 - v0;
@@ -67,8 +58,27 @@ namespace raytracer {
             if (dot(normal, ray.direction) > 0) {normal = -normal;}
 
             return Hit(t, ray.at(t), normal, &material);
+        }
 
+        AABB bounding_box() const {
+            Vec3 min = v0;
+            Vec3 max = v0;
+            std::array<const Vec3*, 3> vertices{&v0, &v1, &v2};
 
+            for (const auto& vertice: vertices) {
+                min.x = std::min(min.x, vertice->x);
+                min.y = std::min(min.y, vertice->y);
+                min.z = std::min(min.z, vertice->z);
+
+                max.x = std::max(max.x, vertice->x);
+                max.y = std::max(max.y, vertice->y);
+                max.z = std::max(max.z, vertice->z);
+            }
+
+            return {
+                min,
+                max
+            };
         }
     };
 }

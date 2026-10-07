@@ -1,3 +1,4 @@
+#include <raytracer/aabb.hpp>
 #include <raytracer/camera.hpp>
 #include <raytracer/hit.hpp>
 #include <raytracer/image.hpp>
@@ -79,7 +80,7 @@ TEST_CASE("Part 3: Ray") {
 // PART 4: Sphere intersection
 // ============================================================================
 
-TEST_CASE("Part 4: Sphere intersection") {
+TEST_CASE("Part 4: Sphere intersection & bounding box") {
   Material m;
   Sphere s(Vec3(0, 0, -5), 1.0, m);
   Ray ray(Vec3(0, 0, 0), Vec3(0, 0, -1));
@@ -89,6 +90,16 @@ TEST_CASE("Part 4: Sphere intersection") {
   CHECK(hit->normal.z == doctest::Approx(1.0));
   Ray miss(Vec3(0, 5, 0), Vec3(0, 0, -1));
   CHECK_FALSE(s.intersect(miss, 1e-4, std::numeric_limits<double>::infinity()).has_value());
+
+  const AABB box = s.bounding_box();
+
+  CHECK(box.min.x == doctest::Approx(-1.0));
+  CHECK(box.min.y == doctest::Approx(-1.0));
+  CHECK(box.min.z == doctest::Approx(-6.0));
+
+  CHECK(box.max.x == doctest::Approx(1.0));
+  CHECK(box.max.y == doctest::Approx(1.0));
+  CHECK(box.max.z == doctest::Approx(-4.0));
 }
 
 // ============================================================================
@@ -105,6 +116,16 @@ TEST_CASE("Part 5: Triangle intersection") {
   CHECK(std::abs(hit->normal.z) == doctest::Approx(1.0));
   Ray miss(Vec3(3, 3, 0), Vec3(0, 0, -1));
   CHECK_FALSE(tri.intersect(miss, 1e-4, std::numeric_limits<double>::infinity()).has_value());
+
+  const AABB box = tri.bounding_box();
+
+  CHECK(box.min.x == doctest::Approx(-1.0));
+  CHECK(box.min.y == doctest::Approx(-1.0));
+  CHECK(box.min.z == doctest::Approx(-5.0));
+
+  CHECK(box.max.x == doctest::Approx(1.0));
+  CHECK(box.max.y == doctest::Approx(1.0));
+  CHECK(box.max.z == doctest::Approx(-5));
 }
 
 // ============================================================================
