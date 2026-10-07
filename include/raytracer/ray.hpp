@@ -9,10 +9,10 @@ namespace raytracer {
         raytracer::Vec3 direction; // direction is kept normalized by the constructor
   
   
-        Ray(const raytracer::Vec3 &origin, const raytracer::Vec3 &direction): origin(origin), direction(direction.normalized()) {}
+        Ray(const Vec3 &origin, const Vec3 &direction): origin(origin), direction(direction.normalized()) {}
   
         // returns the point at parameter t along the ray:  origin + direction * t
-        raytracer::Vec3 at(double t) const { return {origin + direction * t}; }
+        Vec3 at(double t) const { return {origin + direction * t}; }
     };
 
 }

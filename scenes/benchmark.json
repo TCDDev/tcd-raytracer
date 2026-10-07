@@ -1,0 +1,1087 @@
+{
+    "image" : {
+        "width" : 1920,
+        "height" : 1080
+    },
+
+    "camera" : {
+        "eye" : [0.0, 16.0, 0.0],
+        "look_at" : [0.0, 0.0, 0.0],
+        "up" : [0.0, 0.0, -1.0],
+        "fov" : 60.0
+    },
+
+    "background" : [0.5, 0.7, 1.0],
+    "ambient" : [0.1, 0.1, 0.1],
+
+    "lights" : [
+        {
+            "position" : [5.0, 5.0, 5.0],
+            "color" : [1.0, 1.0, 1.0]
+        }
+    ],
+
+    "materials" : {
+        "red" : {
+            "diffuse" : [1.0, 0.0, 0.0],
+            "specular" : [1.0, 1.0, 1.0],
+            "shininess" : 64.0,
+            "reflectivity" : 0.0
+        },
+
+        "blue" : {
+            "diffuse" : [0.0, 0.0, 1.0],
+            "specular" : [1.0, 1.0, 1.0],
+            "shininess" : 64.0,
+            "reflectivity" : 0.0
+        },
+
+        "green" : {
+            "diffuse" : [0.0, 1.0, 0.0],
+            "specular" : [1.0, 1.0, 1.0],
+            "shininess" : 64.0,
+            "reflectivity" : 0.0
+        },
+
+        "yellow" : {
+            "diffuse" : [1.0, 1.0, 0.0],
+            "specular" : [1.0, 1.0, 1.0],
+            "shininess" : 64.0,
+            "reflectivity" : 0.0
+        },
+
+
+        "floor" : {
+            "diffuse" : [0.6, 0.6, 0.6],
+            "specular" : [0.2, 0.2, 0.2],
+            "shininess" : 64,
+            "reflectivity" : 0.0
+        }
+    },
+
+    "objects" : [
+
+        {
+            "type" : "triangle",
+            "vertices" : [
+                [-20.0, -1.0, -20.0],
+                [20.0, -1.0, -20.0],
+                [20.0, -1.0, 20.0]
+            ],
+            "material" : "floor"
+        },
+
+        {
+            "type" : "triangle",
+            "vertices" : [
+                [-20.0, -1.0, -20.0],
+                [20.0, -1.0, 20.0],
+                [-20.0, -1.0, 20.0]
+            ],
+            "material" : "floor"
+        },
+
+         {
+    "type": "sphere",
+    "center": [
+      -6.75,
+      -0.5,
+      -6.75
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -5.25,
+      -0.5,
+      -6.75
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -3.75,
+      -0.5,
+      -6.75
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -2.25,
+      -0.5,
+      -6.75
+    ],
+    "radius": 0.5,
+    "material": "yellow"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -0.75,
+      -0.5,
+      -6.75
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      0.75,
+      -0.5,
+      -6.75
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      2.25,
+      -0.5,
+      -6.75
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      3.75,
+      -0.5,
+      -6.75
+    ],
+    "radius": 0.5,
+    "material": "yellow"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      5.25,
+      -0.5,
+      -6.75
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      6.75,
+      -0.5,
+      -6.75
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -6.75,
+      -0.5,
+      -5.25
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -5.25,
+      -0.5,
+      -5.25
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -3.75,
+      -0.5,
+      -5.25
+    ],
+    "radius": 0.5,
+    "material": "yellow"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -2.25,
+      -0.5,
+      -5.25
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -0.75,
+      -0.5,
+      -5.25
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      0.75,
+      -0.5,
+      -5.25
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      2.25,
+      -0.5,
+      -5.25
+    ],
+    "radius": 0.5,
+    "material": "yellow"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      3.75,
+      -0.5,
+      -5.25
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      5.25,
+      -0.5,
+      -5.25
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      6.75,
+      -0.5,
+      -5.25
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -6.75,
+      -0.5,
+      -3.75
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -5.25,
+      -0.5,
+      -3.75
+    ],
+    "radius": 0.5,
+    "material": "yellow"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -3.75,
+      -0.5,
+      -3.75
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -2.25,
+      -0.5,
+      -3.75
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -0.75,
+      -0.5,
+      -3.75
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      0.75,
+      -0.5,
+      -3.75
+    ],
+    "radius": 0.5,
+    "material": "yellow"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      2.25,
+      -0.5,
+      -3.75
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      3.75,
+      -0.5,
+      -3.75
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      5.25,
+      -0.5,
+      -3.75
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      6.75,
+      -0.5,
+      -3.75
+    ],
+    "radius": 0.5,
+    "material": "yellow"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -6.75,
+      -0.5,
+      -2.25
+    ],
+    "radius": 0.5,
+    "material": "yellow"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -5.25,
+      -0.5,
+      -2.25
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -3.75,
+      -0.5,
+      -2.25
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -2.25,
+      -0.5,
+      -2.25
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -0.75,
+      -0.5,
+      -2.25
+    ],
+    "radius": 0.5,
+    "material": "yellow"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      0.75,
+      -0.5,
+      -2.25
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      2.25,
+      -0.5,
+      -2.25
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      3.75,
+      -0.5,
+      -2.25
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      5.25,
+      -0.5,
+      -2.25
+    ],
+    "radius": 0.5,
+    "material": "yellow"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      6.75,
+      -0.5,
+      -2.25
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -6.75,
+      -0.5,
+      -0.75
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -5.25,
+      -0.5,
+      -0.75
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -3.75,
+      -0.5,
+      -0.75
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -2.25,
+      -0.5,
+      -0.75
+    ],
+    "radius": 0.5,
+    "material": "yellow"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -0.75,
+      -0.5,
+      -0.75
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      0.75,
+      -0.5,
+      -0.75
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      2.25,
+      -0.5,
+      -0.75
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      3.75,
+      -0.5,
+      -0.75
+    ],
+    "radius": 0.5,
+    "material": "yellow"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      5.25,
+      -0.5,
+      -0.75
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      6.75,
+      -0.5,
+      -0.75
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -6.75,
+      -0.5,
+      0.75
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -5.25,
+      -0.5,
+      0.75
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -3.75,
+      -0.5,
+      0.75
+    ],
+    "radius": 0.5,
+    "material": "yellow"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -2.25,
+      -0.5,
+      0.75
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -0.75,
+      -0.5,
+      0.75
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      0.75,
+      -0.5,
+      0.75
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      2.25,
+      -0.5,
+      0.75
+    ],
+    "radius": 0.5,
+    "material": "yellow"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      3.75,
+      -0.5,
+      0.75
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      5.25,
+      -0.5,
+      0.75
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      6.75,
+      -0.5,
+      0.75
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -6.75,
+      -0.5,
+      2.25
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -5.25,
+      -0.5,
+      2.25
+    ],
+    "radius": 0.5,
+    "material": "yellow"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -3.75,
+      -0.5,
+      2.25
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -2.25,
+      -0.5,
+      2.25
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -0.75,
+      -0.5,
+      2.25
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      0.75,
+      -0.5,
+      2.25
+    ],
+    "radius": 0.5,
+    "material": "yellow"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      2.25,
+      -0.5,
+      2.25
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      3.75,
+      -0.5,
+      2.25
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      5.25,
+      -0.5,
+      2.25
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      6.75,
+      -0.5,
+      2.25
+    ],
+    "radius": 0.5,
+    "material": "yellow"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -6.75,
+      -0.5,
+      3.75
+    ],
+    "radius": 0.5,
+    "material": "yellow"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -5.25,
+      -0.5,
+      3.75
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -3.75,
+      -0.5,
+      3.75
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -2.25,
+      -0.5,
+      3.75
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -0.75,
+      -0.5,
+      3.75
+    ],
+    "radius": 0.5,
+    "material": "yellow"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      0.75,
+      -0.5,
+      3.75
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      2.25,
+      -0.5,
+      3.75
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      3.75,
+      -0.5,
+      3.75
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      5.25,
+      -0.5,
+      3.75
+    ],
+    "radius": 0.5,
+    "material": "yellow"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      6.75,
+      -0.5,
+      3.75
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -6.75,
+      -0.5,
+      5.25
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -5.25,
+      -0.5,
+      5.25
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -3.75,
+      -0.5,
+      5.25
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -2.25,
+      -0.5,
+      5.25
+    ],
+    "radius": 0.5,
+    "material": "yellow"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -0.75,
+      -0.5,
+      5.25
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      0.75,
+      -0.5,
+      5.25
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      2.25,
+      -0.5,
+      5.25
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      3.75,
+      -0.5,
+      5.25
+    ],
+    "radius": 0.5,
+    "material": "yellow"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      5.25,
+      -0.5,
+      5.25
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      6.75,
+      -0.5,
+      5.25
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -6.75,
+      -0.5,
+      6.75
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -5.25,
+      -0.5,
+      6.75
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -3.75,
+      -0.5,
+      6.75
+    ],
+    "radius": 0.5,
+    "material": "yellow"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -2.25,
+      -0.5,
+      6.75
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      -0.75,
+      -0.5,
+      6.75
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      0.75,
+      -0.5,
+      6.75
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      2.25,
+      -0.5,
+      6.75
+    ],
+    "radius": 0.5,
+    "material": "yellow"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      3.75,
+      -0.5,
+      6.75
+    ],
+    "radius": 0.5,
+    "material": "red"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      5.25,
+      -0.5,
+      6.75
+    ],
+    "radius": 0.5,
+    "material": "green"
+  },
+  {
+    "type": "sphere",
+    "center": [
+      6.75,
+      -0.5,
+      6.75
+    ],
+    "radius": 0.5,
+    "material": "blue"
+  }
+]
+    
+
+}

@@ -1,0 +1,11 @@
+benchmark scene: 100 spheres, 1920x1080
+
+pre-BVH:
+
+2.79 seconds
+2.76 seconds
+2.74 seconds
+2.75 seconds
+2.75 seconds
+
+Median: 2.75 seconds

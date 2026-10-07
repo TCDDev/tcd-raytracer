@@ -1,22 +1,5 @@
-// Standalone renderer for the P4_raytracer capstone.
-//
-// This is NOT part of cpplings' automatic exercise discovery (it lives outside
-// the exercises/ tree, so the CMake glob never touches it). It lets you render
-// ANY scene file to a PNG using YOUR OWN completed exercise code.
-//
-// How it works: it #includes your exercise source with DOCTEST_CONFIG_DISABLE,
-// which strips every TEST_CASE and doctest's own main(), leaving just the ray
-// tracer classes (parse_scene, Camera, Renderer, Image, ...) for us to drive
-// from a real main(). It therefore only produces good images once you have
-// filled in all the TODOs.
-//
-// Build (from this directory):
-//   g++ -std=c++23 -O2 -DDOCTEST_CONFIG_DISABLE -I../external/doctest 
-//       main.cpp -o raytrace
-//
-// Run (scene file first, output PNG second):
-//   ./raytrace ../exercises/05_capstone/scenes/cornell.txt cornell.png
-//   ./raytrace ../exercises/05_capstone/scenes/spheres.txt spheres.png
+// Standalone renderer for the Raytracer
+// Useage: ./scripts/run.sh <scene.json> <output.png>
 
 #include <exception>
 #include <iostream>

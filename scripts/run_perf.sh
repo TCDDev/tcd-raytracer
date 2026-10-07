@@ -2,8 +2,11 @@
 
 set -euo pipefail
 
+BUILD_DIR="build/gcc-perf"
+
+if [ ! -x "$BUILD_DIR/ray_tracer" ]; then
 cmake --preset gcc-perf
 cmake --build --preset gcc-perf-build
+fi
 
-cmake --preset clang-perf
-cmake --build --preset clang-perf-build
+"$BUILD_DIR/ray_tracer" "$@"
