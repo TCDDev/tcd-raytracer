@@ -151,6 +151,7 @@ TEST_CASE("Part 7: Scene queries") {
   scene.add(
     Sphere{Vec3{0.0, 0.0, -5.0}, 1.0, Material{}}
   );
+  scene.create_bvh();
 
   Ray ray(Vec3(0, 0, 0), Vec3(0, 0, -1));
   auto hit = scene.closest_hit(ray, 1e-4, std::numeric_limits<double>::infinity());
@@ -172,6 +173,7 @@ TEST_CASE("Part 8: Phong shading") {
   Scene scene;
   scene.set_ambient(Vec3{0, 0, 0});
   scene.add(Light{Vec3(0, 0, 5), Vec3(1, 1, 1)});
+  // scene.create_bvh();
   Renderer r(scene);
   
   Material material{
@@ -204,6 +206,7 @@ TEST_CASE("Part 9: trace hits and misses") {
   red.diffuse = Vec3(0.9, 0.1, 0.1);
   red.specular = Vec3(0, 0, 0);
   scene.add(Sphere{Vec3{0, 0, -5}, 1.0, red});
+  scene.create_bvh();
   Renderer r(scene);
   // Miss -> background.
   Vec3 bg = r.trace(Ray(Vec3(0, 10, 0), Vec3(0, 1, 0)), 0);

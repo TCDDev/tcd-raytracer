@@ -15,7 +15,7 @@ namespace raytracer {
                 Vec3 min;
                 Vec3 max;
 
-                bool hit (const Ray& ray, double t_min, double t_max) {
+                bool hit (const Ray& ray, double t_min, double t_max) const {
                     std::array origin{ray.origin.x, ray.origin.y, ray.origin.z};
                     std::array direction{ray.direction.x, ray.direction.y, ray.direction.z};
                     std::array box_min{min.x, min.y, min.z};

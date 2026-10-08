@@ -145,6 +145,8 @@ namespace raytracer {
             );
         }
 
+        result.scene.create_bvh();
+
         return result;
         }
    

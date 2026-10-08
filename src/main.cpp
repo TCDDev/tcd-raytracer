@@ -4,6 +4,8 @@
 #include <exception>
 #include <iostream>
 #include <string>
+#include <thread>
+#include <vector>
 
 #include <raytracer/camera.hpp>
 #include <raytracer/image.hpp>
