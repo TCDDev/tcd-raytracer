@@ -33,7 +33,7 @@ The renderer supports spheres and triangles, Phong shading, shadows, and recursi
 
 ### Pyramid
 Triangle geometry, Phong shading, shadows, reflections.
-![Alternative Text](images/mirrors.png)
+![Alternative Text](images/pyramid.png)
 
 ### Mirrors
 Recursive reflections between facing mirror surfaces
@@ -41,6 +41,7 @@ Recursive reflections between facing mirror surfaces
 
 ### Benchmark
 100 spheres rendered at 1920x1080, used for performance measurements
+![Alternative Text](images/benchmark.png)
 
 ---
 
