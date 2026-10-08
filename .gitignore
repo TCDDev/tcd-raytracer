@@ -5,3 +5,4 @@ perf/
 *.txt
 compile_commands.json
 todo.txt
+!/images/*.png
