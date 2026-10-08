@@ -64,7 +64,7 @@ Performance was measured using a 1920 × 1080 scene containing 100 spheres and t
 
 The combined optimizations reduced total execution time by approximately **82%**.
 
-Benchmarks measure end-to-end execution, including scene loading, rendering, and PNG export.
+Benchmarks measure end-to-end execution (scene loading, rendering, and PNG export).
 
 ---
 
