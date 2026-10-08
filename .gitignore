@@ -2,5 +2,6 @@
 build/
 perf/
 *.png
+*.txt
 compile_commands.json
 todo.txt
