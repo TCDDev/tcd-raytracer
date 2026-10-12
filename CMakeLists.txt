@@ -34,6 +34,7 @@ add_executable(
     src/main.cpp
     src/parsers.cpp
     src/stb_image_write.cpp
+    src/bvh.cpp
 )
 
 add_executable(
@@ -42,6 +43,7 @@ add_executable(
     tests/test_main.cpp
     src/parsers.cpp
     src/stb_image_write.cpp
+    src/bvh.cpp
 )
 
 function(configure_raytracer_target target_name)
